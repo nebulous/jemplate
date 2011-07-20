@@ -87,7 +87,7 @@ use strict;
 use Exporter;
 use vars qw/$VERSION @ISA @EXPORT_OK
             $strict_leading_dot $strict_wildcard_slash/;
-$VERSION = '0.09';
+$VERSION = '0.08';
 @ISA = 'Exporter';
 @EXPORT_OK = qw( glob_to_regex glob_to_regex_string match_glob );
 
@@ -19868,6 +19868,8 @@ function XXX(A){if(!confirm(A)){throw ("terminated...")}return A}function JJJ(A)
 BEGIN { $INC{'Jemplate.pm'} = 'dummy/Jemplate.pm'; }
 BEGIN {
 #line 0 "Jemplate.pm"
+
+
 package Jemplate;
 use 5.006001;
 use strict;
@@ -19875,8 +19877,7 @@ use warnings;
 use Template 2.14;
 use Getopt::Long;
 
- 
-our $VERSION = '0.260';
+our $VERSION = '0.261';
 
 use Jemplate::Parser;
 
@@ -20258,6 +20259,11 @@ sub _preamble {
 
    Copyright 2006-2008 - Ingy döt Net - All rights reserved.
 */
+
+var Jemplate;
+if (typeof(exports) == 'object') {
+    Jemplate = require("jemplate").Jemplate;
+}
 
 if (typeof(Jemplate) == 'undefined')
     throw('Jemplate.js must be loaded before any Jemplate template files');
