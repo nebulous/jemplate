@@ -379,6 +379,13 @@ if (typeof Jemplate.Stash == 'undefined') {
 		};
 		this.LOCAL_ANCHOR = {};
 		this.data.LOCAL = this.LOCAL_ANCHOR;
+
+    for (var attr in config.VARIABLES) { //TODO: make recursive. this only works if VARIABLES is flat.
+      if (!this.data[attr]) {
+        this.data[attr] = config.VARIABLES[attr];
+      } 
+    }
+
 		
 		this.update(stash);
     };
