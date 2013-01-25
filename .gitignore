@@ -6,3 +6,5 @@ t/a.js
 t/b.js
 t/check.js
 t?
+bin/*
+bin
